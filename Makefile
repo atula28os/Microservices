@@ -8,10 +8,10 @@ format:
 	black mylib/*.py main.py
 lint:
 	#fake8
-	pylint --disable=R,C mylib/*.py main.py
+	pylint --disable=R,C mylib/*.py main.py cli-fire.py
 test:
 	#test
-	python -m pytest -vv --cov=mylib tests/test_*.py
+	python -m pytest -vv --cov=mylib --cov=main tests/test_*.py
 deploy:
 	#deploy
 

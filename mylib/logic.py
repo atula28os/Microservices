@@ -6,12 +6,17 @@ Returns:
 
 import wikipedia
 
-def wiki(name="War Godesses"):
+def wiki(name="War Godesses",count=0):
     """ This is wikipedia fetcher """    
-    my_wiki = wikipedia.search(query=name, results=10)
+    my_wiki = wikipedia.search(query=name, results=count)
     return my_wiki
+
+def summary(query, lines=2):
+    results = wikipedia.summary(query,sentences=lines)
+    return results
 
 if __name__ == '__main__':
     result = wiki()
-    print(result)
+    summary_response = summary('Newton')
+    # print(result)
     
