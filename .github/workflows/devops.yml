@@ -16,10 +16,10 @@ jobs:
                 make install
             - name: Lint with pylink
               run: |
-                #make lint
+                make lint
             - name: Test with Pytest
               run: |
-                #make test
+                make test
             - name: Format code
               run: |
                 #make format
